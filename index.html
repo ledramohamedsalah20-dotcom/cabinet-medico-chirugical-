@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Cabinet médico-chirurgical de groupe Dr Bouchahda & Dr Hadi à Kouba, Alger. Informations, horaires, accès et prise de contact."
+  />
+
+  <meta name="theme-color" content="#0d3b43" />
+
+  <title>
+    Dr Bouchahda & Dr Hadi | Cabinet médico-chirurgical à Kouba
+  </title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --ink: #173238;
+      --muted: #667b80;
+      --primary: #0d4f57;
+      --primary-2: #14717a;
+      --accent: #d7b676;
+      --soft: #f2f8f7;
+      --white: #ffffff;
+      --line: #dce9e7;
+
+      --shadow:
+        0 22px 60px rgba(14, 63, 69, 0.12);
+
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+
+      font-size: 0.78rem;
+      font-weight: 700;
+
+      color: var(--primary-2);
+
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.12;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      margin-bottom: 18px;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 50;
+
+      background:
+        rgba(255, 255, 255, 0.92);
+
+      backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid rgba(13, 79, 87, 0.08);
+    }
+
+    .nav-inner {
+      height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+
+      border-radius: 14px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--primary);
+      color: white;
+
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+
+      box-shadow:
+        0 8px 24px rgba(13, 79, 87, 0.22);
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .brand-copy span {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-2);
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 9px;
+
+      border-radius: 14px;
+
+      padding: 13px 18px;
+
+      font-weight: 700;
+
+      transition: 0.25s;
+
+      border: 1px solid transparent;
+    }
+
+    .nav-cta,
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .nav-cta:hover,
+    .btn-primary:hover {
+      background: var(--primary-2);
+      transform: translateY(-1px);
+    }
+
+    .btn-light {
+      background: #ffffff;
+      border-color: var(--line);
+      color: var(--primary);
+    }
+
+    .btn-light:hover {
+      border-color: var(--primary-2);
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 150px 0 78px;
+
+      min-height: 760px;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 88% 18%,
+          rgba(215, 182, 118, 0.22),
+          transparent 22%
+        ),
+        radial-gradient(
+          circle at 10% 70%,
+          rgba(20, 113, 122, 0.10),
+          transparent 24%
+        ),
+        linear-gradient(
+          120deg,
+          #f8fcfb 0%,
+          #edf7f5 100%
+        );
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 520px;
+      height: 520px;
+
+      border:
+        1px solid rgba(13, 79, 87, 0.1);
+
+      border-radius: 50%;
+
+      right: -160px;
+      top: 110px;
+
+      box-shadow:
+        0 0 0 70px rgba(13, 79, 87, 0.025),
+        0 0 0 140px rgba(13, 79, 87, 0.018);
+    }
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.12fr 0.88fr;
+
+      gap: 68px;
+
+      align-items: center;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .location-pill {
+      width: max-content;
+      max-width: 100%;
+
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      border:
+        1px solid var(--line);
+
+      background:
+        rgba(255, 255, 255, 0.76);
+
+      padding: 8px 12px;
+
+      border-radius: 999px;
+
+      font-size: 0.82rem;
+
+      color: var(--primary);
+
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size:
+        clamp(3rem, 6vw, 5.3rem);
+
+      letter-spacing: -0.04em;
+
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--primary-2);
+    }
+
+    .hero-text {
+      font-size: 1.13rem;
+      color: var(--muted);
+
+      max-width: 650px;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 24px;
+
+      margin-top: 34px;
+
+      padding-top: 28px;
+
+      border-top:
+        1px solid var(--line);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 1.03rem;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .stars {
+      color: #b68d3e;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       HERO CARD
+    ========================== */
+
+    .hero-card {
+      position: relative;
+
+      background:
+        rgba(255, 255, 255, 0.82);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.88);
+
+      border-radius: 32px;
+
+      padding: 32px;
+
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(10px);
+    }
+
+    .monogram {
+      height: 260px;
+
+      border-radius: 24px;
+
+      background:
+        linear-gradient(
+          rgba(13, 79, 87, 0.90),
+          rgba(13, 79, 87, 0.90)
+        ),
+        radial-gradient(
+          circle at 30% 20%,
+          #7ab4b0,
+          transparent 60%
+        );
+
+      color: #ffffff;
+
+      display: grid;
+      place-items: center;
+
+      text-align: center;
+
+      padding: 24px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .monogram::before,
+    .monogram::after {
+      content: "";
+
+      position: absolute;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+      border-radius: 50%;
+    }
+
+    .monogram::before {
+      width: 230px;
+      height: 230px;
+
+      right: -90px;
+      top: -90px;
+    }
+
+    .monogram::after {
+      width: 180px;
+      height: 180px;
+
+      left: -80px;
+      bottom: -90px;
+    }
+
+    .medical-cross {
+      width: 58px;
+      height: 58px;
+
+      border-radius: 18px;
+
+      background:
+        rgba(255, 255, 255, 0.12);
+
+      display: grid;
+      place-items: center;
+
+      font-size: 2rem;
+
+      margin:
+        0 auto 18px;
+    }
+
+    .monogram h3 {
+      font-size: 1.8rem;
+    }
+
+    .monogram p {
+      opacity: 0.78;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    .quick-info {
+      display: grid;
+      gap: 13px;
+
+      margin-top: 22px;
+    }
+
+    .info-line {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+
+      padding: 12px;
+
+      border-radius: 15px;
+
+      background: var(--soft);
+    }
+
+    .info-icon {
+      width: 34px;
+      height: 34px;
+
+      flex: 0 0 34px;
+
+      border-radius: 10px;
+
+      background: #ffffff;
+
+      display: grid;
+      place-items: center;
+    }
+
+    .info-line small {
+      display: block;
+      color: var(--muted);
+    }
+
+    .info-line strong {
+      font-size: 0.88rem;
+    }
+
+    /* =========================
+       VALUE STRIP
+    ========================== */
+
+    .value-strip {
+      margin-top: -34px;
+
+      position: relative;
+      z-index: 4;
+    }
+
+    .value-box {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      background: #ffffff;
+
+      border:
+        1px solid var(--line);
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+
+      overflow: hidden;
+    }
+
+    .value-item {
+      padding: 25px 26px;
+
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .value-item + .value-item {
+      border-left:
+        1px solid var(--line);
+    }
+
+    .value-icon {
+      width: 44px;
+      height: 44px;
+
+      flex: 0 0 44px;
+
+      border-radius: 14px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--soft);
+
+      color: var(--primary);
+
+      font-size: 1.2rem;
+    }
+
+    .value-item strong {
+      display: block;
+    }
+
+    .value-item span {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services-head {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 40px;
+
+      align-items: end;
+
+      margin-bottom: 38px;
+    }
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .card {
+      border:
+        1px solid var(--line);
+
+      border-radius: var(--radius);
+
+      padding: 28px;
+
+      background: #ffffff;
+
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 18px 45px
+        rgba(13, 79, 87, 0.09);
+
+      border-color: #bfd9d5;
+    }
+
+    .card-number {
+      font-family:
+        "Playfair Display", serif;
+
+      font-size: 2.5rem;
+
+      color: #c9dedb;
+
+      margin-bottom: 28px;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    /* =========================
+       DOCTORS
+    ========================== */
+
+    .doctors {
+      background: var(--soft);
+    }
+
+    .doctors-grid {
+      display: grid;
+
+      grid-template-columns:
+        0.85fr 1.15fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .doctor-visual {
+      min-height: 460px;
+
+      border-radius: 34px;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255, 255, 255, 0.18),
+          transparent 27%
+        ),
+        linear-gradient(
+          145deg,
+          #0b444c,
+          #14717a
+        );
+
+      box-shadow: var(--shadow);
+
+      padding: 38px;
+
+      color: #ffffff;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .doctor-visual::before {
+      content: "B + H";
+
+      position: absolute;
+
+      right: -5px;
+      top: 20px;
+
+      font-family:
+        "Playfair Display", serif;
+
+      font-size: 8rem;
+      font-weight: 700;
+
+      color:
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .doctor-visual h3 {
+      font-size: 2.1rem;
+      margin-bottom: 8px;
+    }
+
+    .doctor-visual p {
+      opacity: 0.75;
+    }
+
+    .quote {
+      margin-top: 30px;
+
+      border-left:
+        3px solid var(--accent);
+
+      padding-left: 18px;
+
+      font-size: 0.92rem;
+
+      max-width: 330px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 16px;
+
+      margin-top: 28px;
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+
+      align-items: flex-start;
+    }
+
+    .check-badge {
+      width: 26px;
+      height: 26px;
+
+      flex: 0 0 26px;
+
+      border-radius: 50%;
+
+      background: #dcefeb;
+
+      color: var(--primary);
+
+      display: grid;
+      place-items: center;
+
+      font-weight: 800;
+
+      font-size: 0.75rem;
+    }
+
+    .check strong {
+      display: block;
+    }
+
+    .check span {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* =========================
+       CONTACT / HOURS
+    ========================== */
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 22px;
+    }
+
+    .hours-card,
+    .contact-card {
+      border-radius: 28px;
+
+      padding: 34px;
+
+      border:
+        1px solid var(--line);
+
+      background: #ffffff;
+    }
+
+    .hours-card {
+      background: var(--primary);
+      color: #ffffff;
+
+      border-color:
+        var(--primary);
+    }
+
+    .hours-card .eyebrow {
+      color: #bfe2dd;
+    }
+
+    .hours-card .eyebrow::before {
+      background: var(--accent);
+    }
+
+    .hours {
+      margin-top: 25px;
+
+      display: grid;
+      gap: 3px;
+    }
+
+    .hour-row {
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      gap: 20px;
+
+      padding: 12px 0;
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.11);
+    }
+
+    .hour-row span:last-child {
+      font-weight: 700;
+    }
+
+    .closed {
+      opacity: 0.58;
+    }
+
+    .contact-card h3,
+    .hours-card h3 {
+      font-size: 1.75rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-list {
+      margin: 24px 0;
+
+      display: grid;
+      gap: 13px;
+    }
+
+    .contact-list a,
+    .contact-list div {
+      display: flex;
+      gap: 12px;
+
+      align-items: center;
+
+      color: var(--ink);
+    }
+
+    .contact-dot {
+      width: 38px;
+      height: 38px;
+
+      border-radius: 12px;
+
+      background: var(--soft);
+
+      display: grid;
+      place-items: center;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    /* =========================
+       MAP
+    ========================== */
+
+    .map-wrap {
+      margin-top: 22px;
+
+      border-radius: 28px;
+
+      overflow: hidden;
+
+      border:
+        1px solid var(--line);
+
+      min-height: 380px;
+
+      background: var(--soft);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 380px;
+
+      border: 0;
+
+      display: block;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta-section {
+      padding: 36px 0 92px;
+    }
+
+    .cta-box {
+      background:
+        linear-gradient(
+          120deg,
+          #0b434a,
+          #0e6069
+        );
+
+      border-radius: 32px;
+
+      color: #ffffff;
+
+      padding: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 35px;
+
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      right: -100px;
+      top: -160px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      box-shadow:
+        0 0 0 55px
+        rgba(255, 255, 255, 0.03);
+    }
+
+    .cta-box h2 {
+      font-size:
+        clamp(2rem, 4vw, 3rem);
+
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      opacity: 0.76;
+      max-width: 650px;
+    }
+
+    .cta-box .btn-light {
+      position: relative;
+      z-index: 2;
+
+      white-space: nowrap;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 28px 0;
+
+      border-top:
+        1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 20px;
+
+      color: var(--muted);
+
+      font-size: 0.8rem;
+    }
+
+    .footer-brand {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* =========================
+       MOBILE BAR
+    ========================== */
+
+    .mobile-bar {
+      display: none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-grid,
+      .doctors-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 38px;
+      }
+
+      .hero-card {
+        max-width: 620px;
+      }
+
+      .value-box,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item + .value-item {
+        border-left: 0;
+
+        border-top:
+          1px solid var(--line);
+      }
+
+      .services-head {
+        display: block;
+      }
+
+      .services-head .lead {
+        margin-top: 12px;
+      }
+
+      .cta-box {
+        display: block;
+
+        padding: 38px 28px;
+      }
+
+      .cta-box .btn {
+        margin-top: 22px;
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      body {
+        padding-bottom: 72px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .brand-copy span {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 65px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .trust-row {
+        gap: 18px;
+      }
+
+      .hero-card {
+        padding: 18px;
+
+        border-radius: 24px;
+      }
+
+      .monogram {
+        height: 220px;
+      }
+
+      .value-strip {
+        margin-top: -22px;
+      }
+
+      .doctor-visual {
+        min-height: 380px;
+
+        padding: 28px;
+      }
+
+      .hours-card,
+      .contact-card {
+        padding: 25px;
+      }
+
+      .footer-inner {
+        display: block;
+        text-align: center;
+      }
+
+      .footer-inner span {
+        display: block;
+        margin-top: 8px;
+      }
+
+      .mobile-bar {
+        display: grid;
+
+        grid-template-columns:
+          1fr 1fr;
+
+        position: fixed;
+
+        z-index: 60;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 64px;
+
+        background: #ffffff;
+
+        border-top:
+          1px solid var(--line);
+
+        box-shadow:
+          0 -8px 30px
+          rgba(13, 79, 87, 0.08);
+      }
+
+      .mobile-bar a {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .mobile-bar a:first-child {
+        color: var(--primary);
+      }
+
+      .mobile-bar a:last-child {
+        background: #16a66a;
+        color: #ffffff;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a class="brand" href="#accueil">
+
+        <div class="brand-mark">
+          B<span style="color:#d7b676">&</span>H
+        </div>
+
+        <div class="brand-copy">
+          <strong>
+            Dr Bouchahda & Dr Hadi
+          </strong>
+
+          <span>
+            Cabinet médico-chirurgical • Kouba
+          </span>
+        </div>
+
+      </a>
+
+      <div class="nav-links">
+        <a href="#cabinet">
+          Le cabinet
+        </a>
+
+        <a href="#prise-en-charge">
+          Prise en charge
+        </a>
+
+        <a href="#horaires">
+          Horaires
+        </a>
+
+        <a href="#contact">
+          Accès
+        </a>
+      </div>
+
+      <a
+        class="nav-cta"
+        href="https://wa.me/213666141214?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20au%20cabinet%20Dr%20Bouchahda%20%26%20Dr%20Hadi."
+        target="_blank"
+        rel="noopener"
+      >
+        Prendre rendez-vous
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header
+    class="hero"
+    id="accueil"
+  >
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="location-pill">
+          📍 10 Avenue des Frères Abdeslami, Kouba
+        </div>
+
+        <div class="eyebrow">
+          Cabinet médico-chirurgical de groupe
+        </div>
+
+        <h1>
+          Dr Bouchahda
+          <span>&</span>
+          <br>
+          Dr Hadi
+        </h1>
+
+        <p class="hero-text">
+          Une présence médicale de proximité à Kouba,
+          avec un accès simple aux informations du cabinet,
+          aux horaires et à la prise de contact.
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/213666141214?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20au%20cabinet%20Dr%20Bouchahda%20%26%20Dr%20Hadi."
+            target="_blank"
+            rel="noopener"
+          >
+            💬 Contacter sur WhatsApp
+          </a>
+
+          <a
+            class="btn btn-light"
+            href="tel:+213666141214"
+          >
+            ☎ Appeler le cabinet
+          </a>
+
+        </div>
+
+
+        <div class="trust-row">
+
+          <div class="trust-item">
+
+            <strong>
+              <span class="stars">
+                ★★★★★
+              </span>
+
+              4,2/5
+            </strong>
+
+            <span>
+              39 avis Google
+            </span>
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <strong>
+              Kouba, Alger
+            </strong>
+
+            <span>
+              Cabinet de proximité
+            </span>
+
+          </div>
+
+
+          <div class="trust-item">
+
+            <strong>
+              +213 666 14 12 14
+            </strong>
+
+            <span>
+              Contact direct
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- HERO CARD -->
+
+      <aside class="hero-card">
+
+        <div class="monogram">
+
+          <div>
+
+            <div class="medical-cross">
+              ✚
+            </div>
+
+            <h3>
+              Cabinet
+              <br>
+              Dr Bouchahda & Dr Hadi
+            </h3>
+
+            <p>
+              Médecine • Suivi • Orientation médico-chirurgicale
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="quick-info">
+
+          <div class="info-line">
+
+            <div class="info-icon">
+              📍
+            </div>
+
+            <div>
+              <small>
+                Adresse
+              </small>
+
+              <strong>
+                10 Av. des Frères Abdeslami,
+                Kouba 16000
+              </strong>
+            </div>
+
+          </div>
+
+
+          <div class="info-line">
+
+            <div class="info-icon">
+              🕒
+            </div>
+
+            <div>
+
+              <small>
+                Consultations
+              </small>
+
+              <strong>
+                Dim.–Mer. 10h–16h • Sam. 8h–13h
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       VALUE STRIP
+  ========================== -->
+
+  <div class="container value-strip">
+
+    <div class="value-box">
+
+      <div class="value-item">
+
+        <div class="value-icon">
+          👨‍⚕️
+        </div>
+
+        <div>
+          <strong>
+            Cabinet de groupe
+          </strong>
+
+          <span>
+            Dr Bouchahda & Dr Hadi
+          </span>
+        </div>
+
+      </div>
+
+
+      <div class="value-item">
+
+        <div class="value-icon">
+          💬
+        </div>
+
+        <div>
+
+          <strong>
+            Contact simplifié
+          </strong>
+
+          <span>
+            Appel ou WhatsApp en un clic
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="value-item">
+
+        <div class="value-icon">
+          📍
+        </div>
+
+        <div>
+
+          <strong>
+            Accès à Kouba
+          </strong>
+
+          <span>
+            Itinéraire et adresse immédiatement visibles
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       PRISE EN CHARGE
+  ========================== -->
+
+  <section
+    class="section"
+    id="prise-en-charge"
+  >
+
+    <div class="container">
+
+      <div class="services-head">
+
+        <div>
+
+          <div class="eyebrow">
+            Votre parcours au cabinet
+          </div>
+
+          <h2>
+            Une information médicale
+            <br>
+            plus simple à retrouver.
+          </h2>
+
+        </div>
+
+
+        <p class="lead">
+          Le site centralise les informations essentielles
+          avant votre venue et facilite le premier contact
+          avec le cabinet.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <article class="card">
+
+          <div class="card-number">
+            01
+          </div>
+
+          <h3>
+            Consultation médicale
+          </h3>
+
+          <p>
+            Prise de contact rapide pour organiser
+            une consultation selon les disponibilités
+            du cabinet.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-number">
+            02
+          </div>
+
+          <h3>
+            Suivi du patient
+          </h3>
+
+          <p>
+            Un point de contact clair pour les patients
+            déjà suivis et pour les demandes d'information
+            liées au cabinet.
+          </p>
+
+        </article>
+
+
+        <article class="card">
+
+          <div class="card-number">
+            03
+          </div>
+
+          <h3>
+            Orientation médico-chirurgicale
+          </h3>
+
+          <p>
+            Une présentation fidèle au positionnement
+            médico-chirurgical du cabinet, sans surcharger
+            le patient d'informations inutiles.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CABINET
+  ========================== -->
+
+  <section
+    class="section doctors"
+    id="cabinet"
+  >
+
+    <div class="container doctors-grid">
+
+      <div class="doctor-visual">
+
+        <div>
+
+          <div
+            class="eyebrow"
+            style="color:#c8e4e1"
+          >
+            Cabinet de groupe
+          </div>
+
+          <h3>
+            Dr Bouchahda
+            <br>
+            & Dr Hadi
+          </h3>
+
+          <p>
+            Cabinet médico-chirurgical • Kouba, Alger
+          </p>
+
+          <div class="quote">
+            Un espace digital conçu pour rassurer,
+            informer et permettre aux patients de joindre
+            le cabinet sans friction.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="eyebrow">
+          Le cabinet
+        </div>
+
+        <h2>
+          Les informations importantes,
+          sans chercher partout.
+        </h2>
+
+        <p class="lead">
+          Adresse, horaires, téléphone, accès et prise
+          de contact sont réunis sur une seule page claire,
+          pensée d'abord pour le téléphone mobile.
+        </p>
+
+
+        <div class="check-list">
+
+          <div class="check">
+
+            <div class="check-badge">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Accès immédiat au cabinet
+              </strong>
+
+              <span>
+                Adresse complète et carte intégrée
+                pour faciliter le déplacement.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="check">
+
+            <div class="check-badge">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Horaires visibles avant l'appel
+              </strong>
+
+              <span>
+                Le patient sait quand contacter
+                ou se rendre au cabinet.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="check">
+
+            <div class="check-badge">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Contact direct
+              </strong>
+
+              <span>
+                Appel téléphonique et WhatsApp disponibles
+                en un clic, surtout sur mobile.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="check">
+
+            <div class="check-badge">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Image professionnelle cohérente
+              </strong>
+
+              <span>
+                Design sobre, médical et premium
+                adapté à un cabinet de groupe.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       HORAIRES + CONTACT
+  ========================== -->
+
+  <section
+    class="section"
+    id="horaires"
+  >
+
+    <div class="container contact-grid">
+
+
+      <!-- HORAIRES -->
+
+      <div class="hours-card">
+
+        <div class="eyebrow">
+          Horaires
+        </div>
+
+        <h3>
+          Quand nous contacter ?
+        </h3>
+
+        <p style="opacity:.72">
+          Horaires publics actuellement indiqués
+          pour le cabinet.
+        </p>
+
+
+        <div class="hours">
+
+          <div class="hour-row">
+            <span>Samedi</span>
+            <span>08:00 – 13:00</span>
+          </div>
+
+          <div class="hour-row">
+            <span>Dimanche</span>
+            <span>10:00 – 16:00</span>
+          </div>
+
+          <div class="hour-row">
+            <span>Lundi</span>
+            <span>10:00 – 16:00</span>
+          </div>
+
+          <div class="hour-row">
+            <span>Mardi</span>
+            <span>10:00 – 16:00</span>
+          </div>
+
+          <div class="hour-row">
+            <span>Mercredi</span>
+            <span>10:00 – 16:00</span>
+          </div>
+
+          <div class="hour-row closed">
+            <span>Jeudi</span>
+            <span>Fermé</span>
+          </div>
+
+          <div class="hour-row closed">
+            <span>Vendredi</span>
+            <span>Fermé</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div
+        class="contact-card"
+        id="contact"
+      >
+
+        <div class="eyebrow">
+          Contact & accès
+        </div>
+
+        <h3>
+          Cabinet Dr Bouchahda & Dr Hadi
+        </h3>
+
+        <p
+          class="lead"
+          style="font-size:.95rem"
+        >
+          Pour toute demande de rendez-vous,
+          contactez directement le cabinet.
+        </p>
+
+
+        <div class="contact-list">
+
+          <a href="tel:+213666141214">
+
+            <div class="contact-dot">
+              ☎
+            </div>
+
+            <div>
+
+              <small>
+                Téléphone
+              </small>
+
+              <br>
+
+              <strong>
+                +213 666 14 12 14
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <div>
+
+            <div class="contact-dot">
+              📍
+            </div>
+
+            <div>
+
+              <small>
+                Adresse
+              </small>
+
+              <br>
+
+              <strong>
+                10 Av. des Frères Abdeslami,
+                Kouba 16000
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-actions">
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/213666141214?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20au%20cabinet%20Dr%20Bouchahda%20%26%20Dr%20Hadi."
+            target="_blank"
+            rel="noopener"
+          >
+            💬 WhatsApp
+          </a>
+
+
+          <a
+            class="btn btn-light"
+            href="https://maps.app.goo.gl/YiHW5LMuu98oTe6o9"
+            target="_blank"
+            rel="noopener"
+          >
+            ↗ Itinéraire
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- GOOGLE MAP -->
+
+    <div class="container map-wrap">
+
+      <iframe
+        title="Localisation du cabinet Dr Bouchahda & Dr Hadi"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=10%20Avenue%20des%20Fr%C3%A8res%20Abdeslami%2C%20Kouba%2016000%2C%20Alg%C3%A9rie&output=embed"
+      >
+      </iframe>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================== -->
+
+  <section class="cta-section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <div>
+
+          <h2>
+            Besoin de joindre le cabinet ?
+          </h2>
+
+          <p>
+            Contactez le cabinet directement pour demander
+            un rendez-vous ou obtenir une information
+            avant votre déplacement.
+          </p>
+
+        </div>
+
+
+        <a
+          class="btn btn-light"
+          href="https://wa.me/213666141214?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20au%20cabinet%20Dr%20Bouchahda%20%26%20Dr%20Hadi."
+          target="_blank"
+          rel="noopener"
+        >
+          Envoyer un message
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        Dr Bouchahda & Dr Hadi
+      </div>
+
+      <span>
+        Cabinet médico-chirurgical • Kouba, Alger
+      </span>
+
+      <span>
+        © <span id="year"></span>
+        Tous droits réservés
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE BOTTOM BAR
+  ========================== -->
+
+  <div class="mobile-bar">
+
+    <a href="tel:+213666141214">
+      ☎ Appeler
+    </a>
+
+    <a
+      href="https://wa.me/213666141214?text=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20au%20cabinet%20Dr%20Bouchahda%20%26%20Dr%20Hadi."
+      target="_blank"
+      rel="noopener"
+    >
+      💬 WhatsApp
+    </a>
+
+  </div>
+
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
